@@ -13,7 +13,7 @@
     </button>
     <div class="mt-8 mb-36 ">
       <div class="flex flex-col">
-        <card-office v-for="office in officeStore.getOffices" :key="office.id" :office="office"></card-office>
+        <card-office v-for="office in getOffices" :key="office.id" :office="office"></card-office>
       </div>
     </div>
   </div>
@@ -23,13 +23,21 @@
 import { useOfficeStore, useNotificationStore } from '@/stores/index'
 import FormLocation from "./components/FormLocation.vue"
 import CardOffice from "./components/CardOffice.vue"
-import { ref } from "vue"
+import { ref, onMounted, computed } from "vue"
+
+onMounted(() => {
+  officeStore.getAllOffices();
+});
+
 const isFormShow = ref(false)
 const officeStore = useOfficeStore()
 const notificationStore = useNotificationStore()
 const openForm = () => isFormShow.value = !isFormShow.value
 const updateFormState = (value) => isFormShow.value = value
 const closeNotification = () => notificationStore.resetNotification()
+const getOffices = computed(() => {
+  return officeStore.getOffices
+})
 </script>
 
 <style>
