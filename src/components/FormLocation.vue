@@ -3,18 +3,18 @@
     v-if="isShow"
     class="w-[318px] bg-white shadow-lg text-Branddark p-[24px] rounded-lg"
     >
-    <div className="flex justify-between">
-      <span className="font-bold">{{formTitle}}</span>
+    <div class="flex justify-between">
+      <span class="font-bold" id="form-title">{{formTitle}}</span>
       <button @click="closeForm">
         <span><i class="fas fa-xmark text-brandGray"></i></span>
       </button>
     </div>
-    <form @submit.prevent="onSubmit" class="mt-8 flex flex-col gap-6">
+    <form @submit.prevent="onSubmit" class="mt-8 flex flex-col gap-6" id="form-location">
       <base-input id="title" label="Title" v-model="fieldTitle" :error="errorFieldTitle"/>
       <base-input id="address" label="Address" v-model="fieldAddress" :error="errorFieldAddress"/>
       <div>
-        <span className="text-xs text-Brandblue">CONTACT INFORMATION</span>
-        <hr className="h-px bg-gray-200 border-0 dark:bg-gray-700 w-full mt-4" />
+        <span class="text-xs text-Brandblue">CONTACT INFORMATION</span>
+        <hr class="h-px bg-gray-200 border-0 dark:bg-gray-700 w-full mt-4" />
       </div>
       <base-input id="fullName" label="Full Name" v-model="fieldFullName" :error="errorFieldFullName"/>
       <base-input id="jobPosition" label="Job Position" v-model="fieldJobPosition" :error="errorFieldJobPosition"/>
@@ -143,7 +143,6 @@ const isDisabled = computed(() => {
   }
   return true
 })
-
 const resetValue = () => {
   fieldTitle.value = ''
   fieldAddress.value = ''

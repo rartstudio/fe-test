@@ -2,43 +2,47 @@ import { defineStore } from 'pinia';
 
 export const useOfficeStore = defineStore('offices',{
     state: () => ({
-        offices: [{
-            id: 1,
-            title: "Go-Jek",
-            address: "5260 Donec St.",
-            name: "Hellena John",
-            job: "Software Tester",
-            email: "georgia.young@gmail.com",
-            phone: "(808) 555-0111",
-          },
-          {
-            id: 2,
-            title: "Tokopedia",
-            address: "7526 Erat. Rd.",
-            name: "Tony Stark",
-            job: "Iron Man",
-            email: "tonystark@gmail.com",
-            phone: "(808) 777-7777",
-          },
-          {
-            id: 3,
-            title: "Bukalapak",
-            address: "P.O. Box 959, 8061 Tellus Av.",
-            name: "Peter Parker",
-            job: "Spider-Man",
-            email: "spiderman@gmail.com",
-            phone: "(999) 555-0111",
-          },
-          {
-            id: 4,
-            title: "Go-Car",
-            address: "8467 Elementum Av.",
-            name: "Bruce Banner",
-            job: "Hulk",
-            email: "brucebanner@gmail.com",
-            phone: "(222) 123-0111",
-          }
-        ]
+        // ui mode
+        // offices: [{
+        //     id: 1,
+        //     title: "Go-Jek",
+        //     address: "5260 Donec St.",
+        //     name: "Hellena John",
+        //     job: "Software Tester",
+        //     email: "georgia.young@gmail.com",
+        //     phone: "(808) 555-0111",
+        //   },
+        //   {
+        //     id: 2,
+        //     title: "Tokopedia",
+        //     address: "7526 Erat. Rd.",
+        //     name: "Tony Stark",
+        //     job: "Iron Man",
+        //     email: "tonystark@gmail.com",
+        //     phone: "(808) 777-7777",
+        //   },
+        //   {
+        //     id: 3,
+        //     title: "Bukalapak",
+        //     address: "P.O. Box 959, 8061 Tellus Av.",
+        //     name: "Peter Parker",
+        //     job: "Spider-Man",
+        //     email: "spiderman@gmail.com",
+        //     phone: "(999) 555-0111",
+        //   },
+        //   {
+        //     id: 4,
+        //     title: "Go-Car",
+        //     address: "8467 Elementum Av.",
+        //     name: "Bruce Banner",
+        //     job: "Hulk",
+        //     email: "brucebanner@gmail.com",
+        //     phone: "(222) 123-0111",
+        //   }
+        // ]
+
+        // test mode
+        offices: []
     }),
     actions: {
       addOffice(office){

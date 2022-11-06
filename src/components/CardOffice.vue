@@ -65,11 +65,11 @@ const props = defineProps({
   }
 })
 const officeStore = useOfficeStore();
-const deleteOffice = (value) => officeStore.deleteOffice(value)
 const isFormShow = ref(false)
+const cardContentShow = ref(false);
+const { office } = toRefs(props);
+const deleteOffice = (value) => officeStore.deleteOffice(value)
 const updateFormState = (value) => isFormShow.value = value
 const toggleFormState = () => isFormShow.value = !isFormShow.value
-const cardContentShow = ref(false);
-const {office} = toRefs(props);
 const toggleCardContentShow = () => cardContentShow.value = !cardContentShow.value
 </script>
